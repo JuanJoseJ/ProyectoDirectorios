@@ -19,23 +19,6 @@ public class NodoN<Directorio extends Comparable<Directorio>> {
 		this.padre = padre;
 	}
 
-	public int altura() {
-		return altura(this);
-	}
-
-	public int altura(NodoN<Directorio> n) {
-		if(n==null) return -1;
-		ArrayList<Integer> l=new ArrayList<Integer>();
-		if (n.getHijos().isEmpty()){
-			l.add(0);
-		}else {
-			for(int i=0;i<n.getHijos().size();i++){
-				l.add(1+altura((NodoN<Directorio>) n.getHijos().get(i)));
-			}
-		}
-		return Collections.max(l);
-	}
-
 	//getts & setts (Ademas hice un metodo para agregar hijos a un nodo y para pedir un hijo en una
 	//posicion del arreglo de hijos).
 

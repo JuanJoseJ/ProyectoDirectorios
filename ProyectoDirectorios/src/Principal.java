@@ -10,6 +10,6 @@ public class Principal {
         d1.addHijo(d3);
         ArbolN a=new ArbolN(d);
         a.getArbol();
-        System.out.println("La altura es de: "+a.getRaiz().altura());
+
     }
 }

@@ -27,6 +27,21 @@ public class ArbolN<Directorio extends Comparable<Directorio>> {
         }
     }
 
+    public AVL<Directorio> ANtoAVL(){ //Metodo para pasar de ArbolN a AVL
+
+        ArrayList<Directorio> N=this.getArbol();
+        AVL<Directorio> V=new AVL<Directorio>(new NodoB<Directorio>(N.get(0)));
+        for(int i=1;i<N.size();i++){
+            try {
+                V.insertar(new NodoB<Directorio>(N.get(i)));
+            } catch (ExceptionNodo exceptionNodo) {
+                System.out.println("Excepcion: "+exceptionNodo);
+            }
+        }
+        return V;
+    }
+
+
     public NodoN getRaiz() {
         return raiz;
     }
