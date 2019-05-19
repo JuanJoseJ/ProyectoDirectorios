@@ -13,11 +13,6 @@ public class NodoN<Directorio extends Comparable<Directorio>> {
 		hijos=new ArrayList<NodoN<Directorio>>();
 	}
 
-	public NodoN(int n) {
-		this.llave=llave;
-		padre=null;
-		hijos=new ArrayList<NodoN<Directorio>>();
-	}
 
 
 	public NodoN(Directorio llave, ArrayList hijos, NodoN<Directorio> padre) {
