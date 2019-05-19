@@ -46,16 +46,15 @@ public class Directorio implements Comparable<Directorio>{
     public int compareTo(Directorio o) {
         // TODO Auto-generated method stub
         if(this.nombre.compareTo(o.getNombre())==0) {
-            if(this.peso>o.getPeso())
-                return 1;
-            else if(this.peso<o.getPeso())
+            if(this.peso<o.getPeso())
                 return -1;
-            else
-                return 0;
-        }else if(this.nombre.compareTo(o.getNombre())<0)
-            return -1;
-        else
-            return 1;
+            else if(this.peso>o.getPeso())
+                return 1;
+            return 0;
+        }else {
+            return (this.nombre.compareTo(o.getNombre()));
+        }
 
     }
+
 }
