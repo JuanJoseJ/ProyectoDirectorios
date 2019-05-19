@@ -3,32 +3,30 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
-public class NodoN<Directorio extends Comparable<Directorio>> {
-	protected Directorio llave;
-	ArrayList<NodoN<Directorio>> hijos;
-	protected NodoN<Directorio> padre;
-	public NodoN() {
-		this.llave=llave;
-		padre=null;
-		hijos=new ArrayList<NodoN<Directorio>>();
+public class NodoN<E extends Comparable<E>> {
+	protected E llave;
+	ArrayList<NodoN<E>> hijos=new ArrayList<NodoN<E>>();
+	protected NodoN<E> padre;
+
+	public NodoN(E llave) {
+		this.llave = llave;
 	}
 
-
-
-	public NodoN(Directorio llave, ArrayList hijos, NodoN<Directorio> padre) {
+	public NodoN(E llave, ArrayList hijos, NodoN<E> padre) {
 		this.llave = llave;
 		this.hijos = hijos;
 		this.padre = padre;
 	}
 
+
 	//getts & setts (Ademas hice un metodo para agregar hijos a un nodo y para pedir un hijo en una
 	//posicion del arreglo de hijos).
 
-	public Directorio getLlave() {
+	public E getLlave() {
 		return llave;
 	}
 
-	public void setLlave(Directorio llave) {
+	public void setLlave(E llave) {
 		this.llave = llave;
 	}
 
@@ -36,7 +34,7 @@ public class NodoN<Directorio extends Comparable<Directorio>> {
 		return hijos;
 	}
 
-	public void addHijo(NodoN<Directorio> hijo) {
+	public void addHijo(NodoN<E> hijo) {
 		this.hijos.add(hijo);
 	}
 
@@ -44,11 +42,11 @@ public class NodoN<Directorio extends Comparable<Directorio>> {
 		return this.hijos.get(posicion);
 	}
 
-	public NodoN<Directorio> getPadre() {
+	public NodoN<E> getPadre() {
 		return padre;
 	}
 
-	public void setPadre(NodoN<Directorio> padre) {
+	public void setPadre(NodoN<E> padre) {
 		this.padre = padre;
 	}
 }

@@ -78,7 +78,7 @@ public class NodoB<E extends Comparable<E>> {
     public void setPadre(NodoB<E> padre) {
         this.padre = padre;
     }
-    
+
 
 }
 

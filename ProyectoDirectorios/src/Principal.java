@@ -1,14 +1,18 @@
 public class Principal {
 
     public static void main(String[] args) {
-        NodoN d=new NodoN();
-        NodoN d1=new NodoN();
-        NodoN d2=new NodoN();
-        NodoN d3=new NodoN();
-        d.addHijo(d1);
-        d.addHijo(d2);
-        d1.addHijo(d3);
-        ArbolN a=new ArbolN(d);
+        Directorio d = new Directorio(1);
+        Directorio d2 = new Directorio(2);
+        Directorio d3 = new Directorio(3);
+        Directorio d4 = new Directorio(4);
+        NodoN n=new NodoN(d);
+        NodoN n1=new NodoN(d2);
+        NodoN n2=new NodoN(d3);
+        NodoN n3=new NodoN(d4);
+        n.addHijo(n1);
+        n.addHijo(n2);
+        n1.addHijo(n3);
+        ArbolN a=new ArbolN(n);
         System.out.println(a.getArbol());
         AVL a2= new AVL(a.ANtoAVL().getRaiz()); 
         a2.preordenR();

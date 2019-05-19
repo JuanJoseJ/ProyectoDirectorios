@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
-public class ArbolN<Directorio extends Comparable<Directorio>> {
-    public NodoN<Directorio> raiz;
+public class ArbolN<E extends Comparable<E>> {
+    public NodoN<E> raiz;
 
-    public ArbolN(NodoN<Directorio> raiz) {
+    public ArbolN(NodoN<E> raiz) {
         this.raiz = raiz;
     }
 
     public ArbolN() {
     }
 
-    public ArrayList<Directorio> getArbol() {
-        ArrayList<Directorio> lista= new ArrayList<Directorio>();
+    public ArrayList<E> getArbol() {
+        ArrayList<E> lista= new ArrayList<E>();
         getArbol(raiz,lista);
         return lista;
     }
 
-    private void getArbol(NodoN<Directorio> raiz, ArrayList<Directorio> lista) {
+    private void getArbol(NodoN<E> raiz, ArrayList<E> lista) {
         if (raiz==null) {
 
         }else {
@@ -27,13 +27,13 @@ public class ArbolN<Directorio extends Comparable<Directorio>> {
         }
     }
 
-    public AVL<Directorio> ANtoAVL(){ //Metodo para pasar de ArbolN a AVL
-        ArrayList<Directorio> N=this.getArbol();
-        NodoB nodo= new NodoB<Directorio>(N.get(0));
-        AVL<Directorio> V=new AVL<Directorio>(nodo);
+    public AVL<E> ANtoAVL(){ //Metodo para pasar de ArbolN a AVL
+        ArrayList<E> N=this.getArbol();
+        NodoB nodo= new NodoB<E>(N.get(0));
+        AVL<E> V=new AVL<E>(nodo);
         for(int i=1;i<N.size();i++){
             try {
-                V.insertar(new NodoB<Directorio>(N.get(i)));
+                V.insertar(new NodoB<E>(N.get(i)));
             } catch (ExceptionNodo exceptionNodo) {
                 System.out.println("Excepcion: "+exceptionNodo);
             }
