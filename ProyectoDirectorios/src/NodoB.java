@@ -79,6 +79,12 @@ public class NodoB<E extends Comparable<E>> {
         this.padre = padre;
     }
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return llave.toString();
+	}
+
 
 }
 

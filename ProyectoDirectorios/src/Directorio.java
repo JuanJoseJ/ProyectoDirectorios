@@ -57,4 +57,12 @@ public class Directorio implements Comparable<Directorio>{
 
     }
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.nombre;
+	}
+    
+    
+
 }
