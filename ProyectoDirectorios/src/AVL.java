@@ -6,6 +6,7 @@ public class AVL<E extends Comparable<E>> extends ArbolBinarioBusqueda<E> {
 
 	@Override
 	public void insertar(NodoBinario<E> nodo) throws ExceptionNodo {
+		balancear(nodo.getPadre());
 		super.insertar(nodo);
 		balancear(nodo);
 	}

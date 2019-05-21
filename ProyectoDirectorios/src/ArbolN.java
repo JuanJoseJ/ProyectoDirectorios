@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 
 public class ArbolN<E extends Comparable<E>> {
@@ -49,4 +50,17 @@ public class ArbolN<E extends Comparable<E>> {
     public void setRaiz(NodoN<E> raiz) {
         this.raiz = raiz;
     }
+
+    // public void crearArbol(String rutaRaiz){
+    //     File f=new File(rutaRaiz);
+    //     Directorio raiz=new Directorio(f.getName(), f.getAbsolutePath(), f.length());
+    //     this.raiz= (NodoN<E>) new NodoN<Directorio>(raiz);
+    // }
+
+    // public void crearArbol(String rutaRaiz,NodoN<Directorio> nodo){
+    //     File f=new File(rutaRaiz);
+    //     for (File dir : f.listFiles()) {
+            
+    //     }
+    // }
 }
