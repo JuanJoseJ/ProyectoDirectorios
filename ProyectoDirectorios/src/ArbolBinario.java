@@ -45,7 +45,7 @@ public class ArbolBinario<E extends Comparable<E>> {
 	private void InOrden(NodoBinario<E> raiz) {
 		if(raiz!=null) {
 			InOrden(raiz.getHijoIzq());
-			System.out.print(raiz.getInfo()+" \t");
+			System.out.print(raiz.getInfo()+"\t");
 			InOrden(raiz.getHijoDer());
 		}
 	}
@@ -136,22 +136,5 @@ public class ArbolBinario<E extends Comparable<E>> {
 			index=cantidadHojas(raiz.hijoDer,index);
 		}
 		return index;
-	}
-	
-	public static void main(String[] arg) {
-		ArbolBinario<Integer> a=new ArbolBinario<Integer>(new NodoBinario<Integer>(10));
-		a.raiz.setHijoIzq(new NodoBinario<Integer>(7));
-		a.raiz.hijoIzq.setHijoIzq(new NodoBinario<Integer>(5));
-		a.raiz.hijoIzq.setHijoDer(new NodoBinario<Integer>(9));
-		a.raiz.setHijoDer(new NodoBinario<Integer>(15));
-		a.raiz.hijoDer.setHijoIzq(new NodoBinario<Integer>(12));
-		a.raiz.hijoDer.setHijoDer(new NodoBinario<Integer>(15));
-		System.out.println("Preorden: ");
-		a.PreOrden();
-		System.out.println("\n\nPostorden: ");
-		a.PostOrden();
-		System.out.println("\n\nInOrden: ");
-		a.InOrden();
-		System.out.println("\n\nLa cantidad de hojas es: "+a.cantidadHojas());
 	}
 }

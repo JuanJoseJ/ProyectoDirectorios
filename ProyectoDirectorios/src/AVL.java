@@ -86,18 +86,4 @@ public class AVL<E extends Comparable<E>> extends ArbolBinarioBusqueda<E> {
 			nodoAux=nodoAux.getPadre();
 		return nodoAux;
 	}
-	
-	public static void main(String[] args) {
-		AVL<Integer> a=new AVL<Integer>(new NodoBinario<Integer>(10));
-		try {
-			a.insertar(new NodoBinario<Integer>(15));
-			a.insertar(new NodoBinario<Integer>(18));
-			a.insertar(new NodoBinario<Integer>(20));
-			a.insertar(new NodoBinario<Integer>(30));
-			a.eliminar(10);
-			a.PreOrden();
-		} catch (ExceptionNodo e) {
-			System.out.println(e.getMessage());
-		}
-	}
 }

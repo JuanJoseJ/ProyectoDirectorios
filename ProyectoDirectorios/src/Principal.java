@@ -34,7 +34,7 @@ public class Principal {
         n3.addHijo(n7);
         ArbolN<Directorio> a=new ArbolN<Directorio>(n);
         System.out.println(a.getArbol());
-        AVL<Directorio> a2=new AVL<Directorio>(a.ANtoAVL().getRaiz());
+        AVL<Directorio> a2=a.ANtoAVL();
         a2.InOrden();
     }
 }

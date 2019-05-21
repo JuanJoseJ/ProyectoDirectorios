@@ -53,7 +53,6 @@ public class Directorio implements Comparable<Directorio>{
         }else {
             return (this.nombre.compareTo(o.getNombre()));
         }
-
     }
 
 	@Override
