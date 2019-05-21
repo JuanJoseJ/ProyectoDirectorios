@@ -1,7 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 
 public class NodoN<E extends Comparable<E>> {
 	protected E llave;
@@ -12,7 +9,7 @@ public class NodoN<E extends Comparable<E>> {
 		this.llave = llave;
 	}
 
-	public NodoN(E llave, ArrayList hijos, NodoN<E> padre) {
+	public NodoN(E llave, ArrayList<NodoN<E>> hijos, NodoN<E> padre) {
 		this.llave = llave;
 		this.hijos = hijos;
 		this.padre = padre;
@@ -30,7 +27,7 @@ public class NodoN<E extends Comparable<E>> {
 		this.llave = llave;
 	}
 
-	public ArrayList getHijos() {
+	public ArrayList<NodoN<E>> getHijos() {
 		return hijos;
 	}
 
@@ -38,7 +35,7 @@ public class NodoN<E extends Comparable<E>> {
 		this.hijos.add(hijo);
 	}
 
-	public  NodoN findHijo(int posicion){
+	public  NodoN<E> findHijo(int posicion){
 		return this.hijos.get(posicion);
 	}
 

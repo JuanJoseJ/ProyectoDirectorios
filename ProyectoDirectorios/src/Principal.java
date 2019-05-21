@@ -17,14 +17,14 @@ public class Principal {
         d6.setNombre("f");
         d7.setNombre("g");
         d8.setNombre("h");
-        NodoN n=new NodoN(d);
-        NodoN n1=new NodoN(d2);
-        NodoN n2=new NodoN(d3);
-        NodoN n3=new NodoN(d4);
-        NodoN n4=new NodoN(d5);
-        NodoN n5=new NodoN(d6);
-        NodoN n6=new NodoN(d7);
-        NodoN n7=new NodoN(d8);
+        NodoN<Directorio> n=new NodoN<Directorio>(d);
+        NodoN<Directorio> n1=new NodoN<Directorio>(d2);
+        NodoN<Directorio> n2=new NodoN<Directorio>(d3);
+        NodoN<Directorio> n3=new NodoN<Directorio>(d4);
+        NodoN<Directorio> n4=new NodoN<Directorio>(d5);
+        NodoN<Directorio> n5=new NodoN<Directorio>(d6);
+        NodoN<Directorio> n6=new NodoN<Directorio>(d7);
+        NodoN<Directorio> n7=new NodoN<Directorio>(d8);
         n.addHijo(n1);
         n.addHijo(n2);
         n.addHijo(n4);
@@ -32,10 +32,9 @@ public class Principal {
         n1.addHijo(n6);
         n4.addHijo(n5);
         n3.addHijo(n7);
-        ArbolN a=new ArbolN(n);
+        ArbolN<Directorio> a=new ArbolN<Directorio>(n);
         System.out.println(a.getArbol());
-        AVL a2= new AVL(a.ANtoAVL().getRaiz()); 
-        a2.preordenR();
-
+        AVL<Directorio> a2=new AVL<Directorio>(a.ANtoAVL().getRaiz());
+        a2.InOrden();
     }
 }

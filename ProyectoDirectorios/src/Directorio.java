@@ -44,7 +44,6 @@ public class Directorio implements Comparable<Directorio>{
 
     @Override
     public int compareTo(Directorio o) {
-        // TODO Auto-generated method stub
         if(this.nombre.compareTo(o.getNombre())==0) {
             if(this.peso<o.getPeso())
                 return -1;
@@ -59,7 +58,6 @@ public class Directorio implements Comparable<Directorio>{
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return this.nombre;
 	}
     

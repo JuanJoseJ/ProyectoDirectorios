@@ -29,11 +29,11 @@ public class ArbolN<E extends Comparable<E>> {
 
     public AVL<E> ANtoAVL(){ //Metodo para pasar de ArbolN a AVL
         ArrayList<E> N=this.getArbol();
-        NodoB nodo= new NodoB<E>(N.get(0));
+        NodoBinario<E> nodo= new NodoBinario<E>(N.get(0));
         AVL<E> V=new AVL<E>(nodo);
         for(int i=1;i<N.size();i++){
             try {
-                V.insertar(new NodoB<E>(N.get(i)));
+                V.insertar(new NodoBinario<E>(N.get(i)));
             } catch (ExceptionNodo exceptionNodo) {
                 System.out.println("Excepcion: "+exceptionNodo);
             }
@@ -42,11 +42,11 @@ public class ArbolN<E extends Comparable<E>> {
     }
 
 
-    public NodoN getRaiz() {
+    public NodoN<E> getRaiz() {
         return raiz;
     }
 
-    public void setRaiz(NodoN raiz) {
+    public void setRaiz(NodoN<E> raiz) {
         this.raiz = raiz;
     }
 }
