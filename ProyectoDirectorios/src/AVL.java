@@ -66,7 +66,7 @@ public class AVL<E extends Comparable<E>> extends ArbolBinarioBusqueda<E> {
 		NodoBinario<E> izq=nodo.getHijoIzq();
 		izq.setPadre(nodo.getPadre());
 		nodo.setHijoIzq(izq.getHijoDer());
-		izq.setHijoIzq(nodo);
+		izq.setHijoDer(nodo);
 		return izq;
 	}
 	
