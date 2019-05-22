@@ -32,6 +32,7 @@ public class NodoN<E extends Comparable<E>> {
 	}
 
 	public void addHijo(NodoN<E> hijo) {
+		hijo.setPadre(this);
 		this.hijos.add(hijo);
 	}
 
