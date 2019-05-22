@@ -63,7 +63,7 @@ public class Escena extends JPanel {
     private PanelArbol<Directorio> vista;
 
     public Escena() {
-        a = crearArbol("B:\\Users\\santi\\Documents\\Prueba");
+        a = crearArbol("/home/zettaploom/Documentos/P");
         // System.out.println(a.getArbol());
         AVL<Directorio> avl = a.ANtoAVL();
         // avl.InOrden();
