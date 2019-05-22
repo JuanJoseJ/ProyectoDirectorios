@@ -63,7 +63,7 @@ public class Escena extends JPanel {
     private PanelArbol<Directorio> vista;
 
     public Escena() {
-        a = crearArbol("/home/zettaploom/Documentos/P");
+        a = crearArbol("C:\\Users\\Claudia\\Documents\\F");
         // System.out.println(a.getArbol());
         AVL<Directorio> avl = a.ANtoAVL();
         // avl.InOrden();
@@ -94,9 +94,8 @@ public class Escena extends JPanel {
                 } catch (IOException e1) {
                     JOptionPane.showMessageDialog(null, e1.getMessage(), "Advertencia", ERROR);
                 }
-
             } catch (ExceptionNodo e1) {
-                JOptionPane.showMessageDialog(null, e1.getMessage(), "Advertencia", ERROR);
+                JOptionPane.showMessageDialog(null, "No se puede abrir el directorio", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
         });
     }
