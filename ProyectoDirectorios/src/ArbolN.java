@@ -49,4 +49,16 @@ public class ArbolN<E extends Comparable<E>> {
     public void setRaiz(NodoN<E> raiz) {
         this.raiz = raiz;
     }
+
+	public boolean estaVacia() {
+		return raiz==null;
+	}
+
+	public ArrayList<NodoN<E>> obtenerHijos(NodoN<E> elemento) {
+        return elemento.getHijos();
+    }
+
+    public NodoN<E> obtenerPadre(NodoN<E> elemento){
+        return elemento.getPadre();
+    }
 }

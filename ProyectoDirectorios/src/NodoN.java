@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class NodoN<E extends Comparable<E>> {
 	protected E llave;
-	ArrayList<NodoN<E>> hijos=new ArrayList<NodoN<E>>();
+	ArrayList<NodoN<E>> hijos = new ArrayList<NodoN<E>>();
 	protected NodoN<E> padre;
 
 	public NodoN(E llave) {
@@ -15,9 +15,9 @@ public class NodoN<E extends Comparable<E>> {
 		this.padre = padre;
 	}
 
-
-	//getts & setts (Ademas hice un metodo para agregar hijos a un nodo y para pedir un hijo en una
-	//posicion del arreglo de hijos).
+	// getts & setts (Ademas hice un metodo para agregar hijos a un nodo y para
+	// pedir un hijo en una
+	// posicion del arreglo de hijos).
 
 	public E getLlave() {
 		return llave;
@@ -36,7 +36,7 @@ public class NodoN<E extends Comparable<E>> {
 		this.hijos.add(hijo);
 	}
 
-	public  NodoN<E> findHijo(int posicion){
+	public NodoN<E> findHijo(int posicion) {
 		return this.hijos.get(posicion);
 	}
 
@@ -46,5 +46,10 @@ public class NodoN<E extends Comparable<E>> {
 
 	public void setPadre(NodoN<E> padre) {
 		this.padre = padre;
+	}
+
+	@Override
+	public String toString() {
+		return llave.toString();
 	}
 }
