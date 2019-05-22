@@ -38,14 +38,22 @@ public class Principal {
         // System.out.println(a.getArbol());
         // AVL<Directorio> a2=a.ANtoAVL();
         // a2.InOrden();
-        ArbolN<Directorio> a = crearArbol("/home/zettaploom/Documentos");
-        a.getArbol();
+        ArbolN<Directorio> a = crearArbol("B:\\Users\\santi\\Documents\\Prueba");
+        System.out.println(a.getArbol());
+        AVL<Directorio> avl = a.ANtoAVL();
+        avl.InOrden();
+        System.out.println(a.getArbol().size());
+        System.out.println(avl.InOrdenArrayList().size());
+        try {
+            System.out.println(avl.buscar(new Directorio("10", "", 0)).getInfo().getRuta());
+        } catch (ExceptionNodo e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static ArbolN<Directorio> crearArbol(String rutaRaiz) {
         File f = new File(rutaRaiz);
-        ArbolN<Directorio> a = new ArbolN<Directorio>(
-                new NodoN<Directorio>(new Directorio(f.getName(), f.getAbsolutePath(), f.length())));
+        ArbolN<Directorio> a = new ArbolN<Directorio>(new NodoN<Directorio>(new Directorio(f.getName(), f.getAbsolutePath(), f.length())));
         crearArbol(a.getRaiz());
         return a;
     }
@@ -55,9 +63,10 @@ public class Principal {
             File f = new File(nodo.getLlave().getRuta());
             if(f.isDirectory()&&f.listFiles()!=null){
                 for (File dir : f.listFiles())
-                    nodo.addHijo(new NodoN<Directorio>(new Directorio(dir.getName(), dir.getAbsolutePath(), dir.length())));            }
+                    nodo.addHijo(new NodoN<Directorio>(new Directorio(dir.getName(), dir.getAbsolutePath(), dir.length())));            
+                }
                 for (NodoN<Directorio> nodoNuevo : nodo.getHijos()) 
                     crearArbol(nodoNuevo);
-            }
+        }
     }
 }
